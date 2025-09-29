@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,400,600|Tulpen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  margin: 0;
+  text-align: center;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #efecdb;
+  
+  --background-color: #333;
+  --primary-color: #f8f5e6;
+  --secondary-color: #2b2118;
+  --accent-color: #8b5a2b;
+  --ink-blot: #1e1e1e;
+  --paper-shadow: rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: #eeeeee;
+}
+
+body:not(:has(.app .homePage-container)) .app {
+  background-image: linear-gradient(to top, #ffffff, #dddee7, #b8bed0, #91a0b9, #6784a2);
+  height: 120vh;
+}

@@ -1,0 +1,90 @@
+.menu-container {
+  width: 960px;
+  margin: 0 auto;
+  /* background: #0000009a;
+  backdrop-filter: blur(10px); */
+  background-color: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 28px;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  position: fixed;
+  z-index: 9999;
+  top: 10px;
+  left: 0;
+  right: 0;
+  height: 60px;
+}
+.menu-container label {
+  position: relative;
+  z-index: 3;
+  width: 20%;
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #e0e0e0, #b0b0b0);
+      -webkit-background-clip: text;
+      background-clip: text;
+      text-shadow: 0 10px 20px rgba(0, 0, 0, 1);
+      transform-style: preserve-3d;
+  float: left;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  transition-delay: 0.2s;
+}
+.menu-container input[type=radio] {
+  display: none;
+}
+.menu-container input[type=radio]:checked + label {
+  color: rgb(21, 126, 231);
+}
+.menu-container input[type=radio]:checked ~ div {
+  width: auto;
+}
+.menu-container input[type=radio]#f:checked ~ .menu-border {
+  left: 0;
+  right: 80%;
+}
+.menu-container input[type=radio]#s:checked ~ .menu-border {
+  left: 60%;
+  right: 20%;
+}
+.menu-container input[type=radio]#t:checked ~ .menu-border {
+  left: 40%;
+  right: 40%;
+}
+.menu-container input[type=radio]#fo:checked ~ .menu-border {
+  left: 20%;
+  right: 60%;
+}
+.menu-container input[type=radio]#fi:checked ~ .menu-border {
+  left: 80%;
+  right: 0;
+}
+.menu-border {
+  position: absolute;
+  z-index: 2;
+  height: 40px;
+  background-color: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: rgba(60, 114, 160, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  bottom: 10px;
+  left: 0;
+  width: 20%;
+  max-width: 150px;
+  transform: translateX(20px);
+  border-radius: 24px;
+  transition: left 0.4s ease-out, right 0.4s ease;
+  transition-delay: 0.2s, 0.2s;
+}
+
+body:not(:has(.app .homePage-container)) .menu-container {
+  top: -50px;
+  transition: top 0.4s ease;
+}
+body:not(:has(.app .homePage-container)) .menu-container:hover {
+  top: 0px;
+  transition: top 0.4s ease;
+}
